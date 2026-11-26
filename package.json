@@ -1,6 +1,6 @@
 {
   "name": "@vereefy/sdk",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "VEREEFY Node.js SDK — EU AI Act Compliance-Infrastruktur",
   "keywords": ["EU AI Act", "compliance", "KI", "audit", "vereefy"],
   "license": "MIT",

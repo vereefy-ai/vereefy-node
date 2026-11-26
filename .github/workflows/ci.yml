@@ -49,8 +49,16 @@ jobs:
 
       - run: npm ci
 
+      - name: npm-Version pruefen und ggf. aktualisieren
+        run: |
+          CURRENT=$(npm --version)
+          echo "npm-Version vor Upgrade: $CURRENT"
+          MAJOR=$(echo "$CURRENT" | cut -d. -f1)
+          if [ "$MAJOR" -lt 11 ]; then
+            npm install -g npm@11
+          fi
+          npm --version
+
       - run: npm run build
 
       - run: npm publish --provenance --access public
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}

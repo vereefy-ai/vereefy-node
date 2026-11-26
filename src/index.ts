@@ -15,7 +15,7 @@
 
 import { createHash } from "node:crypto";
 
-export const SDK_VERSION = "1.0.0";
+export const SDK_VERSION = "1.0.1";
 const DEFAULT_API_URL = "https://api.vereefy.ai";
 
 // ── Typen ─────────────────────────────────────────────────────────────────
