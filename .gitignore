@@ -1,0 +1,7 @@
+node_modules/
+dist/
+*.js.map
+*.cjs.map
+*.mjs.map
+.env
+.env.local

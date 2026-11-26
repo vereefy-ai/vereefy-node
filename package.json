@@ -1,0 +1,43 @@
+{
+  "name": "@vereefy/sdk",
+  "version": "1.0.0",
+  "description": "VEREEFY Node.js SDK — EU AI Act Compliance-Infrastruktur",
+  "keywords": ["EU AI Act", "compliance", "KI", "audit", "vereefy"],
+  "license": "MIT",
+  "author": "VEREEFY <hello@vereefy.ai>",
+  "homepage": "https://vereefy.ai",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vereefy-ai/vereefy-node"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "test": "node --experimental-vm-modules node_modules/.bin/jest",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@types/jest": "^29.5.14",
+    "@types/node": "^22.10.1",
+    "jest": "^29.7.0",
+    "ts-jest": "^29.2.5",
+    "tsup": "^8.3.5",
+    "typescript": "^5.7.2"
+  }
+}
